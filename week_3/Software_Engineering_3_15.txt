@@ -1,0 +1,2 @@
+Describe the role of polymorphism in object-oriented technology. Give an example.
+

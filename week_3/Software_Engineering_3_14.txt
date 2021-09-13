@@ -1,0 +1,2 @@
+What is the difference between an object and a class in OO technology?
+

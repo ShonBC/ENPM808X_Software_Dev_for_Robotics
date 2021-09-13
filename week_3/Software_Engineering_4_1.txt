@@ -1,0 +1,3 @@
+Draw  a  class  diagram  of  a  small  banking  system  showing  the  associations between three classes: 
+    the bank, customer, and the account.
+

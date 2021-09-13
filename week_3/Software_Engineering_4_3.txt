@@ -1,0 +1,3 @@
+Draw an activity diagram of pumping gas and paying by credit card at the pump. 
+Include at least five activities, such as “Select fuel grade” and at least two decisions, 
+such as “Get receipt?”

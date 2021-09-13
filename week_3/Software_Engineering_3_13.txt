@@ -1,0 +1,2 @@
+What is inheritance in object-oriented technology? Give an example.
+

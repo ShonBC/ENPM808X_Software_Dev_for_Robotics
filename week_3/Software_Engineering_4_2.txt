@@ -1,0 +1,4 @@
+Draw  a  class  diagram  of  a  library  lending  books  using  the  following classes: 
+    Librarian,  Lending  Session,  Overdue  Fine,  Book  Inventory, Book, Library, 
+    Checkout System, and Library Card. (Provide one-sentence definition of each class)
+
