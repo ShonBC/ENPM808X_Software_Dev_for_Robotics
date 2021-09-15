@@ -1,2 +1,5 @@
 What is the difference between an object and a class in OO technology?
 
+A class is the blueprint used for defining an object in OOP. A class may 
+have attributes defining the common properties that will define the objects 
+created using that class. An object is an instance of the class.

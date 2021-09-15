@@ -1,1 +1,9 @@
 Explain  how  a  class  dependency  graph  differs  from  a  UML  class diagram.
+
+A dependency graph shows how classes depend on each other and is made by referencing 
+existing code. It is useful when maintaining legacy code to know how changes can affect 
+other parts of the code.
+
+A UML class diagram shows the breakdown of class structures. The UML class diagram
+shows the class attributes, methods, if they are public or private, and how they are 
+connected to other classes. They are independent of the software.
