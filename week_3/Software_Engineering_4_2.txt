@@ -2,3 +2,13 @@ Draw  a  class  diagram  of  a  library  lending  books  using  the  following c
     Librarian,  Lending  Session,  Overdue  Fine,  Book  Inventory, Book, Library, 
     Checkout System, and Library Card. (Provide one-sentence definition of each class)
 
+Librarian: Works at the Library and runs the check out system.
+Lending Session: The Book is checked out for the duration of the Lending Session.
+Overdue Fine: Part of the Checkout Session is if a Book is returned late, a fine is issued.
+Book Inventory: Part of the Library, the inventory tells us which Books are in stock.
+Book: Part of the Book Inventory and is the item checked out during the Lending Session.
+Library: The over all establishment that the Librarian works at, stores the Book Inventory, 
+            and has an established Checkout System.
+Checkout System: Part of the Library, system that requires a library Card to checkout a Book
+                    for the duration of a Lending Session.
+Library Card: Required to checkout a Book through the Checkout System for the duration of a Lending Session.
