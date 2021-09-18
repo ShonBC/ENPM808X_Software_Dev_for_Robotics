@@ -45,20 +45,41 @@ std::vector<double> GetGrades()
 
 }
 
-double FinalGrade(std::vector<double> grade_list)
+double FinalGrade(std::vector<double> g_list)
 {
     double total = 0;
 
-    for(double grade : grade_list)
+    for(double grade : g_list)
     {
         total += grade;
     }
 
-    int size = grade_list.size();
+    int size = g_list.size();
 
     double final_grade = total / size;
 
     return final_grade;
+}
+
+bool MoreStudents()
+{
+    
+    std::cout<<"Would you like to enter another students grades? (Y or N)"<<std::endl;
+    std::string decision = "";
+    
+    std::cin>> decision;
+
+    if (decision == "Y")
+    {
+        return true;            
+    }
+    else
+    {
+
+        return false;
+        
+    }
+
 }
 
 int main()
@@ -72,7 +93,8 @@ int main()
     {
 
         //Store Students Name in vector.  
-        std::string name = GetName();
+        std::string name = "";
+        name = GetName();
         students_list.push_back(name);
 
         //Store homework grades in a vector.
@@ -82,19 +104,10 @@ int main()
         //Compute final grade and store it in the grade list.
         double final_grade = FinalGrade(homework_grades);
         std::cout<<final_grade<<std::endl;
-        grade_list.push_back(final_grade);
+        grade_list.push_back(final_grade);        
 
+        more_students = MoreStudents();
         
-
-        std::cout<<"Would you like to enter another students grades? (Yes or No)"<<std::endl;
-        std::string decision = "";
-        std::cin>> decision;
-
-        if (decision != "Yes")
-        {
-            break;            
-        }
-
     }
 
     for(std::string name : students_list)
