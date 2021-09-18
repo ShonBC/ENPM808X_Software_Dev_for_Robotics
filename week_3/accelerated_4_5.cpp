@@ -55,6 +55,6 @@ std::vector<std::string> GetWords()
 int main()
 {
 
-    GetWords();
+    std::vector<std::string> word_list = GetWords();
 
 }
