@@ -22,5 +22,9 @@
         "ms-vscode.cpptools",
         "RichardHe.you-complete-me",
         "vector-of-bool.cmake-tools"
-	]
+    ],
+    "files.associations": {
+        "ostream": "cpp",
+        "istream": "cpp"
+    }
 }

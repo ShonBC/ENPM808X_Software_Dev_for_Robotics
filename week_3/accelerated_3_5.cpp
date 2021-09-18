@@ -8,6 +8,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <limits>
 
 //Enter name
 //Store name in first vector
@@ -30,15 +31,27 @@ std::string GetName()
 std::vector<double> GetGrades()
 {
     
-    std::cout<<"Please enter 5 homework grades. Enter ';' when finished: " << std::endl;
+    std::cout<<"Please enter 5 homework grades. Enter 'f' when finished: " << std::endl;
 
     std::vector<double> grades;
 
     double x;
+    char y = 'f';
 
-    while (std::cin >> x)
+    while (true)
         {
-            grades.push_back(x);
+            std::cin >> x;
+            if (!x)
+            {
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                std::cin.clear(); 
+                break;
+            }
+            else
+            {
+                grades.push_back(x);
+            }
+            
         }
 
     return grades;
@@ -47,6 +60,7 @@ std::vector<double> GetGrades()
 
 double FinalGrade(std::vector<double> g_list)
 {
+
     double total = 0;
 
     for(double grade : g_list)
@@ -59,11 +73,14 @@ double FinalGrade(std::vector<double> g_list)
     double final_grade = total / size;
 
     return final_grade;
+
 }
 
 bool MoreStudents()
 {
-    
+
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    std::cin.clear(); 
     std::cout<<"Would you like to enter another students grades? (Y or N)"<<std::endl;
     std::string decision = "";
     
@@ -71,7 +88,9 @@ bool MoreStudents()
 
     if (decision == "Y")
     {
-        return true;            
+
+        return true;   
+
     }
     else
     {
@@ -103,8 +122,8 @@ int main()
 
         //Compute final grade and store it in the grade list.
         double final_grade = FinalGrade(homework_grades);
-        std::cout<<final_grade<<std::endl;
-        grade_list.push_back(final_grade);        
+        // std::cout<<final_grade<<std::endl;
+        grade_list.push_back(final_grade);       
 
         more_students = MoreStudents();
         
@@ -113,7 +132,7 @@ int main()
     for(std::string name : students_list)
     {
 
-        std::cout<<name;
+        std::cout<<name<< " ";
 
     }
 
@@ -122,10 +141,9 @@ int main()
     for(double grade : grade_list)
     {
 
-        std::cout<<grade;
+        std::cout<<grade<< " ";
 
     }
     std::cout<<std::endl;
     
-
 }
