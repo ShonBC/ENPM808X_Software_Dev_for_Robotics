@@ -10,12 +10,11 @@
 #include <string>
 #include <limits>
 
-//Enter name
-//Store name in first vector
-//Enter X homework grades for each student 
-//Store grade in second vector
-//Compute Final grade
-
+/**
+ * @brief Get the Name object. Asks user for name of student.
+ * 
+ * @return std::string Returns the student name.
+ */
 std::string GetName()
 {
 
@@ -28,6 +27,11 @@ std::string GetName()
 
 }
 
+/**
+ * @brief Get the Grades object. Asks user for homework grades. 
+ * 
+ * @return std::vector<double> Returns a vector containing all the input grades.
+ */
 std::vector<double> GetGrades()
 {
     
@@ -58,6 +62,12 @@ std::vector<double> GetGrades()
 
 }
 
+/**
+ * @brief Computes the average of the vector g_list. 
+ * 
+ * @param g_list List of the students homework grades.
+ * @return double Final grade percentage.
+ */
 double FinalGrade(std::vector<double> g_list)
 {
 
@@ -76,6 +86,12 @@ double FinalGrade(std::vector<double> g_list)
 
 }
 
+/**
+ * @brief Asks user if there are more students to enter.
+ * 
+ * @return true If there are more students to enter.
+ * @return false If the user is done entering students information.
+ */
 bool MoreStudents()
 {
 
@@ -101,11 +117,34 @@ bool MoreStudents()
 
 }
 
+/**
+ * @brief Prints the items stored in the vector passed regardless of the datatype stored.
+ * 
+ * @tparam T 
+ * @param vec 
+ */
+template<typename T>
+void PrintVec(std::vector<T> vec)
+{
+
+    for(T item : vec)
+    {
+
+        std::cout<<item<< " ";
+
+    }
+
+    std::cout<<std::endl;
+
+} 
+
 int main()
 {
 
+    //Initialize student and grade vectors
     std::vector<std::string> students_list;
     std::vector<double> grade_list;
+    
     bool more_students = true;
 
     while(more_students)
@@ -122,28 +161,13 @@ int main()
 
         //Compute final grade and store it in the grade list.
         double final_grade = FinalGrade(homework_grades);
-        // std::cout<<final_grade<<std::endl;
         grade_list.push_back(final_grade);       
 
         more_students = MoreStudents();
         
     }
 
-    for(std::string name : students_list)
-    {
-
-        std::cout<<name<< " ";
-
-    }
-
-    std::cout<<std::endl;
-
-    for(double grade : grade_list)
-    {
-
-        std::cout<<grade<< " ";
-
-    }
-    std::cout<<std::endl;
+    PrintVec(students_list);
+    PrintVec(grade_list);
     
 }
