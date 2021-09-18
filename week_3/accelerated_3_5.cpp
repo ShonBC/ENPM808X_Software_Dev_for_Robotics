@@ -40,7 +40,6 @@ std::vector<double> GetGrades()
     std::vector<double> grades;
 
     double x;
-    char y = 'f';
 
     while (true)
         {
