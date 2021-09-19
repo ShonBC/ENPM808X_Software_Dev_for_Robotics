@@ -1,6 +1,6 @@
 What is inheritance in object-oriented technology? Give an example.
 
-Inheritance is describes the idea of a class using another class as a starting point for initialization. 
+Inheritance describes the idea of a class using another class as a starting point for initialization. 
 A parent class can be used to make a child class that inherits the parents attributes and methods. An 
 example would be if a parent class called Car defined the company attribute then the derived class Truck 
 would inherit the company attribute but may also define the color of the car.  
