@@ -17,7 +17,7 @@ std::string Concatenate(std::vector<std::string> vec)
 int main()
 {
 
-    std::vector<std::string> test = 
-    Concatenate(test)
+    std::vector<std::string> test = {"H","e","l","l","o"};
+    std::cout<< Concatenate(test) << std::endl;
 
 }
