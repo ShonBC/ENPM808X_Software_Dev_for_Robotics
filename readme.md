@@ -7,6 +7,6 @@ or
     - Example:
         Week_3$ cd Accelerated_3_5
 
-- Run the program using"./<file_name>
+- Run the program using "./<file_name>"
     - Example:
         Week_3/Accelerated_3_5$ ./accelerated_3_5 
