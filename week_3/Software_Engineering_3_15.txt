@@ -1,9 +1,0 @@
-Describe the role of polymorphism in object-oriented technology. Give an example.
-
-Polymorphism in OOP allows for multiple versions of a method to be defined. When the method is called
-the program will run whichever one corresponds to the appropriate object class that called it. This allows 
-for many class instances to call the same method but perform a different action based on the parameters 
-passed to the method. An example would be if a class method called Print takes a string then would print 
-out a message based off of a string passed to it. Then a second Print method is defined that takes a 
-string and an integer, this method will print out the string multiple times based on the value of 
-the integer passed. 
