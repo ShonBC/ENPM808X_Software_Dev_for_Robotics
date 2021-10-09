@@ -25,6 +25,7 @@
     ],
     "files.associations": {
         "ostream": "cpp",
-        "istream": "cpp"
+        "istream": "cpp",
+        "iostream": "cpp"
     }
 }
