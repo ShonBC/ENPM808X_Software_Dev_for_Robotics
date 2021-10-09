@@ -2,12 +2,11 @@
 
 #include <iostream>
 
-class AnalogSensor
-{
-public:
+class AnalogSensor {
+ public:
     AnalogSensor(unsigned int samples);
     ~AnalogSensor();
     int Read();
-private:
+ private:
     unsigned int mSamples;
 };
